@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items - Fresh Basket</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='item.css') }}">
+</head>
+<body>
+    <h2>Available Items</h2>
+    <ul>
+        {% for item in items %}
+            <li>
+                <h3>{{ item.item_name }}</h3>
+                <p>Price: ${{ item.price }}</p>
+                {% if session.get('user_id') %}
+                    <form action="javascript:void(0);" onsubmit="addToCart('{{ item.item_id }}', '{{ item.item_name }}', '{{ item.price }}')">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity-{{ item.item_id }}" name="quantity" min="1" value="1" required>
+                        <button type="submit">Add to Cart</button>
+                    </form>
+                {% else %}
+                    <p><a href="{{ url_for('login') }}">Log in to add to cart</a></p>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <script>
+        function addToCart(itemId, itemName, itemPrice) {
+            const quantity = document.getElementById(`quantity-${itemId}`).value;
+            fetch('/add_to_cart', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    user_id: '{{ session["user_id"] }}',  // User's ID from session
+                    item_id: itemId,
+                    item_name: itemName,
+                    item_price: itemPrice,
+                    quantity: quantity
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Item added to cart!');
+                } else {
+                    alert('Error adding item to cart');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Basket - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Fresh Basket</h1>
+        <nav>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Register</a>
+            <a href="{{ url_for('items') }}">Items</a>
+            <a href="{{ url_for('login') }}">Cart</a>
+        </nav>
+    </header>
+    
+
+
+    <section class="hero">
+        <h2>Fresh Groceries Delivered to Your Doorstep</h2>
+        <p>Explore a wide variety of fresh produce, organic products, and pantry essentials. Order now for fast and easy delivery!</p>
+        <div class="cta-buttons">
+            <a href="{{ url_for('register') }}">Get Started</a>
+            <a href="{{ url_for('login') }}">Browse Items</a>
+        </div>
+    </section>
+
+    <main>
+        <p>At Fresh Basket, we are dedicated to bringing the freshest produce directly from farms to your home. Our curated selection of high-quality groceries ensures you always have access to nutritious and delicious food. Order with confidence and enjoy a hassle-free shopping experience.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Fresh Basket. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+</body>
+</html>

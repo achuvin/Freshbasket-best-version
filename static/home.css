@@ -1,0 +1,144 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Wrapper Styles */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: #2d9946;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header h6{
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+nav {
+    margin-top: 1em;
+}
+
+nav a {
+    color: white;
+    font-family: Arial;
+    text-decoration: none;
+    margin: 0 1em;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffeb3b;
+}
+
+/* Hero Section */
+.hero {
+    background: url('/static/images/fresh-groceries.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 5em 1em;
+}
+
+.hero h2 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+.cta-buttons a {
+    background-color: #ffeb3b;
+    color: #333;
+    padding: 0.8em 1.5em;
+    margin: 0 0.5em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta-buttons a:hover {
+    background-color: #ffc107;
+}
+
+/* Main Section */
+main {
+    padding: 2em 1em;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    flex: 1;
+}
+
+main p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #ffeb3b;
+    text-decoration: none;
+    margin: 0 0.5em;
+}
+
+footer a:hover {
+    color: #ffc107;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    nav a {
+        font-size: 1em;
+    }
+}

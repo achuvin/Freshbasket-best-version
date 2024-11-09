@@ -1,0 +1,88 @@
+/*reg */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Light background for contrast */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 450px; /* Slightly wider for comfort */
+    margin: 0 auto; /* Centering the form */
+    padding: 80px 80px 80px 80px; /* Increased padding for a spacious feel */
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for emphasis */
+}
+
+h2 {
+    text-align: center;
+    color: #333; /* Darker text for better contrast */
+    margin-bottom: 20px; /* Spacing below the heading */
+}
+
+.input-group {
+    margin-bottom: 20px; /* Increased spacing between input fields */
+}
+
+label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Spacing between label and input */
+    color: #555; /* Softer color for labels */
+    font-weight: 600; /* Bold labels for emphasis */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 12px; /* Slightly larger padding for comfort */
+    border: 1px solid #ced4da; /* Border color for inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+    font-size: 16px; /* Increased font size for readability */
+    transition: border-color 0.3s; /* Transition effect for border color */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-color: #007bff; /* Highlighted border color on focus */
+    outline: none; /* Removing default outline */
+}
+
+textarea {
+    resize: none; /* Prevent resizing of textarea */
+    height: 120px; /* Fixed height for textarea */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745; /* Primary button color */
+    color: white; /* White text on button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners for button */
+    font-size: 18px; /* Increased font size for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition effect for background color */
+}
+
+button:hover {
+    background-color: #1f7e35; /* Darker shade on hover */
+}
+
+.link-text {
+    text-align: center; /* Centering the text */
+    margin-top: 15px; /* Spacing above the link */
+}
+
+.link-text a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* No underline on link */
+}
+
+.link-text a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

@@ -1,0 +1,65 @@
+/* login */
+/* Centering styles for the login page */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 2em;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.login-container h2 {
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.login-container form input[type="email"],
+.login-container form input[type="password"] {
+    width: 100%;
+    padding: 0.75em;
+    margin: 0.5em 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-container form button {
+    width: 100%;
+    padding: 0.75em;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.login-container form button:hover {
+    background-color: #218a3a;
+}
+
+.login-container a {
+    display: block;
+    margin-top: 1em;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}

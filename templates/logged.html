@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Basket - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Fresh Basket</h1>
+        <nav>
+            <a href="{{ url_for('logout') }}">Logout</a> <!-- Logout button for logged-in users -->
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome Back {{ session['user_name'] }}!</h2> <!-- Display user name after login -->
+        <p>Enjoy shopping for fresh groceries, organic products, and pantry essentials. Everything is just a few clicks away!</p>
+        <div class="cta-buttons">
+            <a href="{{ url_for('items') }}">Browse Items</a>
+            <a href="{{ url_for('cart') }}">View Cart</a>
+        </div>
+    </section>
+
+    <main>
+        <p>At Fresh Basket, we are committed to delivering the freshest produce directly to your doorstep. Enjoy our wide range of high-quality groceries, handpicked to meet your needs.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Fresh Basket. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+</body>
+</html>

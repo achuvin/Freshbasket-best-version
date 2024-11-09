@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop - Fresh Basket</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='shop.css') }}">
+</head>
+<body>
+    <h1>Shop Our Fresh Products</h1>
+    <div id="product-list">
+        {% for product in products %}
+            <div class="product">
+                <img src="{{ url_for('static', filename=product.image) }}" alt="{{ product.name }}">
+                <h3>{{ product.name }}</h3>
+                <p>Price: ${{ product.price }}</p>
+                <input type="number" id="quantity-{{ product.id }}" min="1" value="1">
+                <button onclick="addToCart({ product,id })">Add to Cart</button>
+            </div>
+        {% endfor %}
+    </div>
+
+    <script>
+        function addToCart(productId) {
+            const quantity = document.getElementById(`quantity-${productId}`).value;
+            fetch('/add_to_cart', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ product_id: productId, quantity: quantity })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message);
+                } else {
+                    alert("Error adding to cart.");
+                }
+            });
+        }
+    </script>
+</body>
+</html>
